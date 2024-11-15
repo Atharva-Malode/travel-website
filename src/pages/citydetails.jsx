@@ -4,6 +4,10 @@ import { MapContainer, TileLayer, Circle } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 const CityDetails = () => {
   const { city } = useParams();
@@ -12,6 +16,8 @@ const CityDetails = () => {
   
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch weather data
@@ -160,7 +166,7 @@ const CityDetails = () => {
 
       {/* Book Package Button */}
       <a
-        href="/booking"
+         onClick={() => navigate("/booking")}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-8 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
