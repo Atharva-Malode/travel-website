@@ -8,7 +8,7 @@ const Booking = () => {
   const handleEmiChange = () => setEmiOption(!emiOption);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 p-6">
+    <div className="min-h-screen mt-14 flex items-center justify-center bg-gray-100 dark:bg-gray-900 p-6">
       <div className="bg-white dark:bg-slate-800 shadow-lg rounded-lg p-8 w-full max-w-2xl">
         <h1 className="text-4xl font-bold text-center mb-8 dark:text-white">
           Booking Payment

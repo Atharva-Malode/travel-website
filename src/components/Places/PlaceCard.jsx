@@ -50,7 +50,7 @@ const PlaceCard = ({
               <p>{type}</p>
             </div>
             <div>
-              <p className="text-2xl font-bold">${price}</p>
+              <p className="text-2xl font-bold"> Rs.{price}k</p>
             </div>
           </div>
         </div>
