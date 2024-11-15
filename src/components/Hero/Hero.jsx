@@ -1,16 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [priceValue, setPriceValue] = React.useState(30);
+  const navigate = useNavigate(); // Import useNavigate
+
+  const handleSearch = () => {
+    navigate("/best-places"); // Redirect to the "best-places" route
+  };
 
   return (
     <div className=" bg-black/20 h-full">
       <div className="h-full flex justify-center items-center p-4 bg-primary/10">
         <div className="container grid grid-cols-1 gap-4">
           <div className="text-white">
-            <p data-aos="fade-up" className="text-sm">
-              Our Packages
-            </p>
+            <p data-aos="fade-up" className="text-sm">Our Packages</p>
             <p
               data-aos="fade-up"
               data-aos-delay="300"
@@ -27,7 +31,7 @@ const Hero = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-3">
               <div>
                 <label htmlFor="destination" className="opacity-70">
-                  Searh your Destination
+                  Search your Destination
                 </label>
                 <input
                   type="text"
@@ -52,7 +56,7 @@ const Hero = () => {
                 <label htmlFor="destination" className="opacity-70 block">
                   <div className="w-full flex justify-between items-center">
                     <p>Max Price</p>
-                    <p className="font-bold text-xl">$ {priceValue}</p>
+                    <p className="font-bold text-xl">Rs. {priceValue} k</p>
                   </div>
                 </label>
                 <div className=" bg-gray-100 rounded-full p-2 flex items-center justify-center ">
@@ -70,7 +74,10 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-            <button className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 px-4 py-2 rounded-full duration-200 absolute -bottom-5 left-1/2 -translate-x-1/2">
+            <button
+              onClick={handleSearch} // Add the onClick event
+              className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 px-4 py-2 rounded-full duration-200 absolute -bottom-5 left-1/2 -translate-x-1/2"
+            >
               Search Now
             </button>
           </div>

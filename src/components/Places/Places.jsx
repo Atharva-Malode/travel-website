@@ -6,8 +6,20 @@ import Img3 from "../../assets/places/water.jpg";
 import Img4 from "../../assets/places/place4.jpg";
 import Img5 from "../../assets/places/place5.jpg";
 import Img6 from "../../assets/places/place6.jpg";
+import custom from "../../assets/places/custom.jpg";
 
 const PlacesData = [
+  {
+    img: custom,
+    title: "Custom Package you searched",
+    location: "custom",
+    description: "we have recorded your entry a executive will soon call you back",
+    price: "NULL",
+    type: "Cultural Relax",
+    route: "/custom",
+    latitude: 31.1048,
+    longitude: 77.1734,
+  },
   {
     img: Img1,
     title: "Premium Package",

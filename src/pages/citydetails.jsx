@@ -110,7 +110,7 @@ const CityDetails = () => {
             </div>
             <div className="text-gray-700 dark:text-gray-300">
               <h3 className="font-bold text-xl">Price</h3>
-              <p className="text-2xl font-bold">${price}</p>
+              <p className="text-2xl font-bold">Rs.{price}k</p>
             </div>
           </div>
         </div>
